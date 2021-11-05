@@ -9,6 +9,7 @@ class ClientsSchema extends Schema {
   
       table.increments('id')
       table.string('email')
+      table.string('password')
       table.timestamps()
     })
   }
