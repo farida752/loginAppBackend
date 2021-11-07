@@ -44,10 +44,13 @@ class SignController {
         if(currentClient.password === request.body.password){
             response.send({status : true, msg : "success!"});
             return;
+        }else{
+          response.send({status : false, msg : "Incorrect password!"});
+          return;
         }
       }
       
-       response.send({status:false,msg:"incorrect!",ids:currentClientIds,size:currentClientIds.length});
+       response.send({status:false,msg:"Email not found , you can signUp",ids:currentClientIds,size:currentClientIds.length});
     }
    
     async showUsers({reruest,response}){
